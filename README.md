@@ -11,7 +11,7 @@ We collected multiple datasets including ape210k, exeq300k, math23k, math, gsm8k
 The `code/TAL-SAQ5K-process.py` script was used to process the TAL-SAQ5K datasets into the input-output format for fine-tuning. 
 The `code/process_json.py` script was used to process the ape210k, gsm8k, and math23k datasets into the input-output format for fine-tuning. As these datasets directly provide the final answers, we can directly use the answers as output for processing.
 
-Note: We did try to use thinking-process data for model development, but the model didn't perform well possibly due to limitations in capabilities when trained with these datasets. 
+> Note: We did try to use thinking-process data for model development, but the model didn't perform well possibly due to limitations in capabilities when trained with these datasets. 
 Therefore, we did not continue to use this method for fine-tuning in the following stages.
 
 For the math dataset, which is in English, we utilized the script `LLM_translate_and_thinking_toans.py` to translate it and extract all question-answer pairs from all the subfolders of the math dataset, the output being stored in `/aaai2024comp/math_dataset/MATH/train.json` and `test.json`. 
