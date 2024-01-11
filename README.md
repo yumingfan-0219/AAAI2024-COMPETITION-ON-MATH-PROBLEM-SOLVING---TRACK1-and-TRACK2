@@ -32,6 +32,9 @@ To tackle the issue regarding model outputs that might contain Chinese character
 
 you can replace the path in the code to get the Track1 or Track2 result.
 
+As an important clarification to avoid any possible confusion: 
+Our model was trained exclusively on a Chinese math dataset. We did not develop a separate model for Track2; instead, we utilized the same model purely for prediction purposes in Track2. This approach aligns with our commitment to genuine and fair competition.
+
 The math datasets we gathered and the processed training datasets can be downloaded from the following links:
 
 ## Oriniginal Data and Training Data
