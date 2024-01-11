@@ -1,4 +1,4 @@
-```markdown
+```
 # Algorithm Description of Team fanyuming2023 for AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1 and TRACK2
 
 Our solution involves a series of steps from data collection, data preprocessing, model training, to inference.
@@ -13,7 +13,9 @@ The `code/process_json.py` script was used to process the ape210k, gsm8k, and ma
 
 > Note: We did try to use thinking-process data for model development, but the model didn't perform well possibly due to limitations in capabilities when trained with these datasets. Therefore, we did not continue to use this method for fine-tuning in the following stages.
 
-For the math dataset, which is in English, we utilized the script `LLM_translate_and_thinking_toans.py` to translate it and extract all question-answer pairs from all the subfolders of the math dataset, the output being stored in `/aaai2024comp/math_dataset/MATH/train.json` and `test.json`. Specifically, we used the `qwen14b` model to first perform the translation task, and then fed it with a prompt like `'Question: '+question+'\nProblem-solving process: '+thinking+'\nThe final answer to the above problem based on the problem-solving process will be? Please return the answer directly in the form of a floating-point number.'` to make it only return the final answer, thereby unifying the dataset with the previous ones. The processed data is saved as `train_dataset/math_test_summ.json` and `train_dataset/math_train_summ.json`.
+For the math dataset, which is in English, we utilized the script `LLM_translate_and_thinking_toans.py` to translate it and extract all question-answer pairs from all the subfolders of the math dataset, the output being stored in `/aaai2024comp/math_dataset/MATH/train.json` and `test.json`. 
+Specifically, we used the `qwen14b` model to first perform the translation task, and then fed it with a prompt like `'Question: '+question+'\nProblem-solving process: '+thinking+'\nThe final answer to the above problem based on the problem-solving process will be? Please return the answer directly in the form of a floating-point number.'` to make it only return the final answer, thereby unifying the dataset with the previous ones. 
+The processed data is saved as `train_dataset/math_test_summ.json` and `train_dataset/math_train_summ.json`.
 
 This concludes the data selection stage.
 
@@ -25,7 +27,8 @@ We adapted the `qwen14b-chat` model as our base model and fine-tuned it using in
 
 ## Inference
 
-For the inference stage, we utilized the `code/LLM_get_final_answer.py` code. To tackle the issue regarding model outputs that might contain Chinese characters, English characters, fraction symbols, etc., which couldn't be directly converted into floating-point numbers, we designed a regular expression matching function to translate these into the final output, as shown in the code.
+For the inference stage, we utilized the `code/LLM_get_final_answer.py` code. 
+To tackle the issue regarding model outputs that might contain Chinese characters, English characters, fraction symbols, etc., which couldn't be directly converted into floating-point numbers, we designed a regular expression matching function to translate these into the final output, as shown in the code.
 
 you can replace the path in the code to get the Track1 or Track2 result.
 
