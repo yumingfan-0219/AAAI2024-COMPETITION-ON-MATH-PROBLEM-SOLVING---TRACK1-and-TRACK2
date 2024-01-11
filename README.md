@@ -1,4 +1,3 @@
-```
 # Algorithm Description of Team fanyuming2023 for AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1 and TRACK2
 
 Our solution involves a series of steps from data collection, data preprocessing, model training, to inference.
@@ -38,4 +37,3 @@ Collected Data: [https://cloud.189.cn/web/share?code=YnMj2uJJz6Nb](https://cloud
 Processed Training Data: [https://cloud.189.cn/web/share?code=iYVzyaUfA3ua](https://cloud.189.cn/web/share?code=iYVzyaUfA3ua) (Access Code: 5h0o)
 
 Special thanks to the competition organizers for their hard work.
-```
