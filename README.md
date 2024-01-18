@@ -1,4 +1,4 @@
-# Algorithm Description of Team fanyuming2023 for AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1 and TRACK2
+# Algorithm Description of Team CTYUN-AI for AAAI2024 COMPETITION ON MATH PROBLEM SOLVING - TRACK1 and TRACK2 - TOP1 solution without API
 
 Our solution involves a series of steps from data collection, data preprocessing, model training, to inference.
 
